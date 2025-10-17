@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { Helmet } from "react-helmet-async";
 import emailjs from "@emailjs/browser";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -41,6 +42,18 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen py-16 md:py-20">
+       <Helmet>
+        <title>Contact Us - ForgeLabs</title>
+        <meta name="description" content="Get in touch with ForgeLabs for your web development and software needs. Fill out our contact form or find our contact information." />
+        <meta name="keywords" content="contact ForgeLabs, get in touch, web development contact, software development Nepal, IT company contact" />
+        <meta property="og:title" content="Contact Us - ForgeLabs" />
+        <meta property="og:description" content="Get in touch with ForgeLabs for your web development and software needs. Fill out our contact form or find our contact information." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://forgelabs.tech/contact" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Contact Us - ForgeLabs" />
+        <meta name="twitter:description" content="Get in touch with ForgeLabs for your web development and software needs." />
+      </Helmet>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-12" data-aos="fade-up">

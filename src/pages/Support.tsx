@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -82,6 +83,18 @@ const Support = () => {
 
   return (
     <div className="min-h-screen py-16 md:py-20 bg-background">
+      <Helmet>
+        <title>Support - ForgeLabs</title>
+        <meta name="description" content="Get support for ForgeLabs products and services. Submit a support ticket for any issues or inquiries." />
+        <meta name="keywords" content="ForgeLabs support, customer support, technical support, submit ticket, helpdesk" />
+        <meta property="og:title" content="Support - ForgeLabs" />
+        <meta property="og:description" content="Get support for ForgeLabs products and services. Submit a support ticket for any issues or inquiries." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://forgelabs.tech/support" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Support - ForgeLabs" />
+        <meta name="twitter:description" content="Get support for ForgeLabs products and services." />
+      </Helmet>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div

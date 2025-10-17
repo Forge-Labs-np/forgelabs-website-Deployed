@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Hero from "@/components/Hero";
 import ServiceCard from "@/components/ServiceCard";
 import CTASection from "@/components/CTASection";
@@ -6,6 +7,18 @@ import { Code2, Users, Palette, Wrench, Server } from "lucide-react";
 const Services = () => {
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Our Services - ForgeLabs</title>
+        <meta name="description" content="Explore the services offered by ForgeLabs, including enterprise web application development, outsourcing, UI/UX design, and more." />
+        <meta name="keywords" content="ForgeLabs services, web development, outsourcing, UI/UX design, software development, maintenance, graphics design" />
+        <meta property="og:title" content="Our Services - ForgeLabs" />
+        <meta property="og:description" content="Explore the services offered by ForgeLabs, including enterprise web application development, outsourcing, UI/UX design, and more." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://forgelabs.tech/services" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Our Services - ForgeLabs" />
+        <meta name="twitter:description" content="Explore the services offered by ForgeLabs, including enterprise web application development, outsourcing, UI/UX design, and more." />
+      </Helmet>
       {/* Hero Section */}
       <div data-aos="fade-in">
         <Hero

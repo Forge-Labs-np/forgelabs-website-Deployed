@@ -1,9 +1,22 @@
+import { Helmet } from "react-helmet-async";
 import Hero from "@/components/Hero";
 import { Target, Eye, Users, Award, Shield } from "lucide-react";
 
 const About = () => {
   return (
     <div className="min-h-screen">
+       <Helmet>
+        <title>About ForgeLabs - Our Mission, Vision, and Team</title>
+        <meta name="description" content="Learn about ForgeLabs, a Nepal-based IT company specializing in software and web development. Discover our mission to deliver effective, reliable, and high-quality digital solutions." />
+        <meta name="keywords" content="About ForgeLabs, IT company Nepal, software development, web development, our mission, our vision, who we are" />
+        <meta property="og:title" content="About ForgeLabs - Our Mission, Vision, and Team" />
+        <meta property="og:description" content="Discover our mission to deliver effective, reliable, and high-quality digital solutions." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://forgelabs.tech/about" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="About ForgeLabs - Our Mission, Vision, and Team" />
+        <meta name="twitter:description" content="Learn about ForgeLabs, a Nepal-based IT company specializing in software and web development." />
+      </Helmet>
       {/* Hero Section */}
       <div data-aos="fade-in">
         <Hero

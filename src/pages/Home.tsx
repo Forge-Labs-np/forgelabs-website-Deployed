@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Hero from "@/components/Hero";
 import CTASection from "@/components/CTASection";
 import ServiceCard from "@/components/ServiceCard";
@@ -28,6 +29,20 @@ const Home = () => {
 
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>ForgeLabs - Forging Ideas into Digital Realities</title>
+        <meta name="description" content="ForgeLabs specializes in transforming concepts into scalable, secure, and efficient enterprise web applications. We offer web development, outsourcing support, UI/UX design, and more." />
+        <meta name="keywords" content="ForgeLabs, web development, enterprise applications, software development, outsourcing, UI/UX design, Nepal, IT company" />
+        <meta property="og:title" content="ForgeLabs - Forging Ideas into Digital Realities" />
+        <meta property="og:description" content="Transforming concepts into scalable, secure, and efficient enterprise web applications." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://forgelabs.tech" />
+        <meta property="og:image" content={heroImage} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="ForgeLabs - Forging Ideas into Digital Realities" />
+        <meta name="twitter:description" content="Transforming concepts into scalable, secure, and efficient enterprise web applications." />
+        <meta name="twitter:image" content={heroImage} />
+      </Helmet>
       {/* Hero Section */}
       <div data-aos="fade-in">
         <Hero
