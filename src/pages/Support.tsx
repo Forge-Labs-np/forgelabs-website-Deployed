@@ -11,7 +11,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { toast } from "sonner";
-import { LifeBuoy, AlertCircle, Wrench } from "lucide-react";
+import { LifeBuoy } from "lucide-react";
 
 const Support = () => {
   const [formData, setFormData] = useState({
@@ -81,10 +81,13 @@ const Support = () => {
   };
 
   return (
-    <div className="min-h-screen py-16 md:py-20">
+    <div className="min-h-screen py-16 md:py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="max-w-3xl mx-auto text-center mb-12" data-aos="fade-up">
+        <div
+          className="max-w-3xl mx-auto text-center mb-12"
+          data-aos="fade-up"
+        >
           <div className="flex justify-center mb-4">
             <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center">
               <LifeBuoy className="text-primary-blue" size={32} />
@@ -94,48 +97,18 @@ const Support = () => {
             Need Support?
           </h1>
           <p className="text-lg text-muted-foreground">
-            Users can raise tickets for website maintenance, bugs, or other
-            technical issues. Our support team is here to help you resolve any
-            problems quickly.
+            Our support team is here to help you resolve any problems quickly.
+            Fill out the form below to submit a ticket.
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-            {/* Issue Type Cards */}
-            <div className="bg-card border border-border rounded-lg p-6 text-center hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="100">
-              <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Wrench className="text-primary-blue" size={24} />
-              </div>
-              <h3 className="font-bold text-foreground mb-2">Maintenance</h3>
-              <p className="text-sm text-muted-foreground">
-                Updates, optimizations, and routine maintenance
-              </p>
-            </div>
-
-            <div className="bg-card border border-border rounded-lg p-6 text-center hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="200">
-              <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <AlertCircle className="text-primary-blue" size={24} />
-              </div>
-              <h3 className="font-bold text-foreground mb-2">Bug Report</h3>
-              <p className="text-sm text-muted-foreground">
-                Report technical issues and errors
-              </p>
-            </div>
-
-            <div className="bg-card border border-border rounded-lg p-6 text-center hover:shadow-lg transition-shadow" data-aos="fade-up" data-aos-delay="300">
-              <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <LifeBuoy className="text-primary-blue" size={24} />
-              </div>
-              <h3 className="font-bold text-foreground mb-2">Other Issues</h3>
-              <p className="text-sm text-muted-foreground">
-                General inquiries and other concerns
-              </p>
-            </div>
-          </div>
-
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Support Form */}
-          <div className="bg-card border border-border rounded-lg p-8 shadow-lg" data-aos="fade-up" data-aos-delay="400">
+          <div
+            className="bg-card border border-border rounded-lg p-8 shadow-lg"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <h2 className="text-2xl font-bold text-foreground mb-6">
               Submit a Support Ticket
             </h2>
@@ -197,8 +170,8 @@ const Support = () => {
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="maintenance">Maintenance</SelectItem>
-                    <SelectItem value="bug">Bug</SelectItem>
-                    <SelectItem value="other">Other</SelectItem>
+                    <SelectItem value="bug">Bug Report</SelectItem>
+                    <SelectItem value="other">Other Inquiry</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -232,28 +205,68 @@ const Support = () => {
           </div>
 
           {/* Additional Info */}
-          <div className="mt-8 bg-muted border border-border rounded-lg p-6" data-aos="fade-up" data-aos-delay="500">
-            <h3 className="text-lg font-bold text-foreground mb-3">
+          <div
+            className="bg-muted border border-border rounded-lg p-8"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <h3 className="text-2xl font-bold text-foreground mb-4">
               What happens next?
             </h3>
-            <ul className="space-y-2 text-muted-foreground">
+            <p className="text-muted-foreground mb-6">
+              After you submit a ticket, here’s what you can expect:
+            </p>
+            <ul className="space-y-4 text-muted-foreground">
               <li className="flex items-start">
-                <span className="text-primary-blue mr-2">•</span>
-                You'll receive a confirmation email with your ticket number
+                <span className="text-primary-blue font-bold mr-3 mt-1">
+                  1.
+                </span>
+                <div>
+                  <h4 className="font-semibold text-foreground">
+                    Confirmation Email
+                  </h4>
+                  <p>
+                    You'll receive an automated email with your ticket number.
+                  </p>
+                </div>
               </li>
               <li className="flex items-start">
-                <span className="text-primary-blue mr-2">•</span>
-                Our support team will review your ticket within 24 hours
+                <span className="text-primary-blue font-bold mr-3 mt-1">
+                  2.
+                </span>
+                <div>
+                  <h4 className="font-semibold text-foreground">
+                    Team Review
+                  </h4>
+                  <p>Our support team will review your ticket within 24 hours.</p>
+                </div>
               </li>
               <li className="flex items-start">
-                <span className="text-primary-blue mr-2">•</span>
-                We'll reach out to you via email or phone to resolve the issue
-              </li>
-              <li className="flex items-start">
-                <span className="text-primary-blue mr-2">•</span>
-                For urgent matters, please call us directly at +977 9765142241
+                <span className="text-primary-blue font-bold mr-3 mt-1">
+                  3.
+                </span>
+                <div>
+                  <h4 className="font-semibold text-foreground">
+                    Follow-Up Communication
+                  </h4>
+                  <p>
+                    We'll reach out via email or phone to resolve the issue.
+                  </p>
+                </div>
               </li>
             </ul>
+            <div className="mt-8 border-t border-border pt-6">
+              <h4 className="font-semibold text-foreground mb-2">
+                Urgent Matters
+              </h4>
+              <p className="text-muted-foreground">
+                For immediate assistance, please call us directly at:
+                <br />
+                <span className="font-bold text-primary-blue">
+                  +977 9765142241
+                </span>
+              </p>
+            </div>
           </div>
         </div>
       </div>
