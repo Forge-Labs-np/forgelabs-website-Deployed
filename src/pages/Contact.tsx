@@ -26,7 +26,13 @@ const Contact = () => {
         )
         .then(
           () => {
-            toast.success("Message sent successfully! We'll get back to you soon.");
+            toast.success("Message sent successfully! We'll get back to you soon.", {
+              style: {
+                background: "#1a202c",
+                color: "#ffffff",
+                border: "1px solid #2d3748",
+              },
+            });
             setIsSubmitting(false);
             if (form.current) {
               form.current.reset();
