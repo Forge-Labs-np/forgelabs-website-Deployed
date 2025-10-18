@@ -36,11 +36,6 @@ const ServicesHero = () => {
           <p className="mt-6 text-lg text-gray-600 max-w-xl mx-auto md:mx-0">
             At ForgeLabs, we turn ideas into functional prototypes that evolve into powerful products. Our process is built around collaboration, innovation, and precision — ensuring your business moves from concept to deployment with speed and confidence.
           </p>
-          <div className="mt-8">
-            <Button asChild size="lg">
-              <Link to="/about">Explore Our Process</Link>
-            </Button>
-          </div>
         </motion.div>
 
         {/* Right Side: Illustration */}
