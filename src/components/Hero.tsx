@@ -33,12 +33,12 @@ const Hero = ({
     <section
       className={cn(
         "bg-[#eaf5ff] py-12 px-6",
-        isCompact ? "md:py-16" : "md:py-20"
+        isCompact ? "md:py-16" : "md:py-20 md:min-h-screen"
       )}
     >
       <div
         className={cn(
-          "container mx-auto flex items-center justify-between gap-8",
+          "container mx-auto flex items-center justify-between gap-8 h-full",
           isCompact ? "flex-col text-center" : "flex-col-reverse md:flex-row"
         )}
       >

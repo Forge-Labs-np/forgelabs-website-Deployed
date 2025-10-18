@@ -52,7 +52,7 @@ const Home = () => {
           ctaText="Let's Get Started"
           ctaLink="/contact"
           secondaryCtaText="Discover Our Work"
-          secondaryCtaLink="/portfolio"
+          secondaryCtaLink="/our-work"
           imageSrc={heroImage}
         />
       </div>

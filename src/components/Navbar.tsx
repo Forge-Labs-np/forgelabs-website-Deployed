@@ -14,7 +14,6 @@ const Navbar = () => {
     { name: "About Us", path: "/about" },
     { name: "Services", path: "/services" },
     { name: "Contact", path: "/contact" },
-    { name: "Support", path: "/support" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -29,12 +28,12 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-10">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-medium transition-colors duration-300 hover:text-primary-blue ${
+                className={`text-base font-medium transition-colors duration-300 hover:text-primary-blue ${
                   isActive(link.path)
                     ? "text-primary-blue border-b-2 border-primary"
                     : "text-foreground"
