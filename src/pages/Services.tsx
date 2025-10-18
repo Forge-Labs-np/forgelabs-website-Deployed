@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import Hero from "@/components/Hero";
+import ServicesHero from "@/components/ServicesHero";
 import ServiceCard from "@/components/ServiceCard";
 import CTASection from "@/components/CTASection";
 import { Code2, Users, Palette, Wrench, Server } from "lucide-react";
@@ -19,16 +19,9 @@ const Services = () => {
         <meta name="twitter:title" content="Our Services - ForgeLabs" />
         <meta name="twitter:description" content="Explore the services offered by ForgeLabs, including enterprise web application development, outsourcing, UI/UX design, and more." />
       </Helmet>
-      {/* Hero Section */}
-      <div data-aos="fade-in">
-        <Hero
-          title="Our Services"
-          description="At ForgeLabs, we specialize in building enterprise-grade web applications that are scalable, secure, and efficient. Our services are designed to support businesses of all sizes."
-          ctaText="Get Started"
-          ctaLink="/contact"
-          variant="compact"
-        />
-      </div>
+      
+      {/* New Services Hero Section */}
+      <ServicesHero />
 
       {/* Services Grid */}
       <section className="py-16 md:py-20">
@@ -150,7 +143,7 @@ const Services = () => {
       <div data-aos="fade-in">
         <CTASection
           title="Ready to Get Started?"
-          description="Let's discuss how we can help transform your business with our services"
+          description="Let\'s discuss how we can help transform your business with our services"
           ctaText="Contact Us Today"
           ctaLink="/contact"
           variant="gradient"
