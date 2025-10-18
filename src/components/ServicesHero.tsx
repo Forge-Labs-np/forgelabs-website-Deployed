@@ -1,7 +1,5 @@
 
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -17,7 +15,7 @@ const fadeIn = {
 
 const ServicesHero = () => {
   return (
-    <section className="bg-primary/5 py-20 px-6 md:px-10">
+    <section className="min-h-screen flex items-center bg-primary/5 py-20 px-6 md:px-10">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Left Side: Text Content */}
         <motion.div
