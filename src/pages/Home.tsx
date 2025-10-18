@@ -14,6 +14,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-image.png";
+import ProcessSection from "@/components/ProcessSection";
 
 const Home = () => {
   const technologies = [
@@ -154,6 +155,9 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Process Section */}
+      <ProcessSection />
 
       {/* About Us Teaser */}
       <section className="py-16 md:py-20">
