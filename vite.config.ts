@@ -7,7 +7,7 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: true,
     port: 8080,
-    allowedHosts: ["gregorio-gonothecal-charlesetta.ngrok-free.dev"],
+    allowedHosts: ["all"],
   },
   plugins: [react()].filter(
     Boolean
