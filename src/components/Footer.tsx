@@ -80,14 +80,6 @@ const Footer = () => {
                   Contact
                 </Link>
               </li>
-              <li>
-              <a
-                  href="#"
-                  className="text-muted-foreground hover:text-primary-blue transition-colors"
-                >
-                  Our Extpert Team
-                </a>
-              </li>
             </ul>
           </div>
 
@@ -102,14 +94,6 @@ const Footer = () => {
                 >
                   Get Support
                 </Link>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-muted-foreground hover:text-primary-blue transition-colors"
-                >
-                  Documentation
-                </a>
               </li>
               <li>
                 <a
