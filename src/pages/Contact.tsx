@@ -112,7 +112,7 @@ const Contact = () => {
                   id="phone"
                   name="phone"
                   type="tel"
-                  placeholder="+977-1-234567"
+                  placeholder="+977 9765142241"
                   className="mt-1"
                 />
               </div>
@@ -168,10 +168,10 @@ const Contact = () => {
                       Email
                     </h3>
                     <a
-                      href="mailto:info@forgelabs.com"
+                      href="mailto:forgelabs.np@gmail.com"
                       className="text-primary-blue hover:underline"
                     >
-                      info@forgelabs.com
+                      forgelabs.np@gmail.com
                     </a>
                   </div>
                 </div>
@@ -188,10 +188,10 @@ const Contact = () => {
                       Phone
                     </h3>
                     <a
-                      href="tel:+977-1-234567"
+                      href="tel:+9779765142241"
                       className="text-primary-blue hover:underline"
                     >
-                      +977-1-234567
+                      +977 9765142241
                     </a>
                   </div>
                 </div>

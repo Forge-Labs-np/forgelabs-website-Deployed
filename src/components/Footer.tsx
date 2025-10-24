@@ -26,16 +26,16 @@ const Footer = () => {
               <div className="flex items-center gap-2">
                 <Mail size={16} className="text-primary-blue" />
                 <a
-                  href="mailto:info@forgelabs.com"
+                  href="mailto:forgelabs.np@gmail.com"
                   className="hover:text-primary-blue transition-colors"
                 >
-                  info@forgelabs.com
+                  forgelabs.np@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-2">
                 <Phone size={16} className="text-primary-blue" />
                 <a
-                  href="tel:+977-1-234567"
+                  href="tel:+9779765142241"
                   className="hover:text-primary-blue transition-colors"
                 >
                   +977 9765142241
