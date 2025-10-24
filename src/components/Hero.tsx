@@ -112,7 +112,7 @@ const Hero = ({
             <img
               src={imageSrc}
               alt="Hero Illustration"
-              className="relative z-10 w-full max-w-md"
+              className="relative z-10 w-full max-w-md mix-blend-multiply"
             />
           </div>
         )}
