@@ -2,7 +2,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Link } from "react-router-dom";
 
 const OurWork = () => {
@@ -132,27 +131,6 @@ const OurWork = () => {
               <div className="text-4xl">🚀</div>
               <p className="mt-2 font-semibold">Launch Soon</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Team / Community */}
-      <section className="py-20" data-aos="fade-up">
-        <div className="container mx-auto text-center">
-          <p className="text-lg">Built by passionate developers from Nepal 🇳🇵</p>
-          <div className="flex justify-center space-x-8 mt-8">
-            <Avatar>
-              <AvatarImage src="https://github.com/shadcn.png" />
-              <AvatarFallback>DV</AvatarFallback>
-            </Avatar>
-            <Avatar>
-              <AvatarImage src="https://github.com/shadcn.png" />
-              <AvatarFallback>DV</AvatarFallback>
-            </Avatar>
-            <Avatar>
-              <AvatarImage src="https://github.com/shadcn.png" />
-              <AvatarFallback>DV</AvatarFallback>
-            </Avatar>
           </div>
         </div>
       </section>
