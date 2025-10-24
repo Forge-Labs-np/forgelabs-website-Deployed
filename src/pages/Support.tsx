@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Helmet } from "react-helmet-async";
+import emailjs from "@emailjs/browser";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -15,70 +16,41 @@ import { toast } from "sonner";
 import { LifeBuoy } from "lucide-react";
 
 const Support = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    issueType: "",
-    description: "",
-  });
-
+  const form = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [issueType, setIssueType] = useState("");
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Basic validation
-    if (
-      !formData.name.trim() ||
-      !formData.email.trim() ||
-      !formData.issueType ||
-      !formData.description.trim()
-    ) {
-      toast.error("Please fill in all required fields");
-      setIsSubmitting(false);
-      return;
+    if (form.current) {
+      emailjs
+        .sendForm(
+          "service_hfc11yg",
+          "template_78ljrff",
+          form.current,
+          "x-4rrN370bYRSBZ_b"
+        )
+        .then(
+          () => {
+            toast.success("Support ticket submitted successfully! We'll get back to you soon.");
+            setIsSubmitting(false);
+            if (form.current) {
+              form.current.reset();
+              setIssueType("");
+            }
+          },
+          (error) => {
+            toast.error("Failed to send message. Please try again later.");
+            setIsSubmitting(false);
+          }
+        );
     }
-
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(formData.email)) {
-      toast.error("Please enter a valid email address");
-      setIsSubmitting(false);
-      return;
-    }
-
-    // Simulate ticket submission
-    setTimeout(() => {
-      toast.success(
-        "Support ticket submitted successfully! We'll get back to you soon."
-      );
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        issueType: "",
-        description: "",
-      });
-      setIsSubmitting(false);
-    }, 1000);
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
   };
 
   const handleSelectChange = (value: string) => {
-    setFormData({
-      ...formData,
-      issueType: value,
-    });
+    setIssueType(value);
   };
 
   return (
@@ -125,16 +97,14 @@ const Support = () => {
             <h2 className="text-2xl font-bold text-foreground mb-6">
               Submit a Support Ticket
             </h2>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form ref={form} onSubmit={sendEmail} className="space-y-6">
               {/* Name Field */}
               <div>
-                <Label htmlFor="name">Name *</Label>
+                <Label htmlFor="user_name">Name *</Label>
                 <Input
-                  id="name"
-                  name="name"
+                  id="user_name"
+                  name="user_name"
                   type="text"
-                  value={formData.name}
-                  onChange={handleChange}
                   placeholder="Your full name"
                   required
                   className="mt-1"
@@ -143,13 +113,11 @@ const Support = () => {
 
               {/* Email Field */}
               <div>
-                <Label htmlFor="email">Email *</Label>
+                <Label htmlFor="user_email">Email *</Label>
                 <Input
-                  id="email"
-                  name="email"
+                  id="user_email"
+                  name="user_email"
                   type="email"
-                  value={formData.email}
-                  onChange={handleChange}
                   placeholder="your.email@example.com"
                   required
                   className="mt-1"
@@ -158,13 +126,11 @@ const Support = () => {
 
               {/* Phone Field */}
               <div>
-                <Label htmlFor="phone">Phone (Optional)</Label>
+                <Label htmlFor="user_phone">Phone (Optional)</Label>
                 <Input
-                  id="phone"
-                  name="phone"
+                  id="user_phone"
+                  name="user_phone"
                   type="tel"
-                  value={formData.phone}
-                  onChange={handleChange}
                   placeholder="+977-1-234567"
                   className="mt-1"
                 />
@@ -172,9 +138,10 @@ const Support = () => {
 
               {/* Issue Type Dropdown */}
               <div>
-                <Label htmlFor="issueType">Type of Issue *</Label>
+                <Label htmlFor="issue_type">Type of Issue *</Label>
                 <Select
-                  value={formData.issueType}
+                  name="issue_type"
+                  value={issueType}
                   onValueChange={handleSelectChange}
                   required
                 >
@@ -191,12 +158,10 @@ const Support = () => {
 
               {/* Description Field */}
               <div>
-                <Label htmlFor="description">Description / Message *</Label>
+                <Label htmlFor="message">Description / Message *</Label>
                 <Textarea
-                  id="description"
-                  name="description"
-                  value={formData.description}
-                  onChange={handleChange}
+                  id="message"
+                  name="message"
                   placeholder="Please describe the issue in detail..."
                   required
                   rows={6}
