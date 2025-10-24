@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { useIsMobile } from "../hooks/use-mobile";
-import navLogo from "@/assets/nav-logo.png";
+import navLogo from "/nav-logo.png";
 
 const Navbar = () => {
   const location = useLocation();
