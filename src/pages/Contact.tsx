@@ -168,10 +168,10 @@ const Contact = () => {
                       Email
                     </h3>
                     <a
-                      href="mailto:forgelabs.np@gmail.com"
+                      href="mailto:forgelabs.tech@gmail.com"
                       className="text-primary-blue hover:underline"
                     >
-                      forgelabs.np@gmail.com
+                      forgelabs.tech@gmail.com
                     </a>
                   </div>
                 </div>
