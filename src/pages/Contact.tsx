@@ -26,7 +26,7 @@ const Contact = () => {
         )
         .then(
           () => {
-            toast.success("Message sent successfully! We'll get back to you soon.", {
+            toast.success("Message sent successfully! We\'ll get back to you soon.", {
               style: {
                 background: "#1a202c",
                 color: "#ffffff",
@@ -68,7 +68,7 @@ const Contact = () => {
           </h1>
           <p className="text-lg text-muted-foreground">
             Have a project, an idea, or just want to chat? Fill out the form
-            below, and we'll get back to you promptly.
+            below, and we\'ll get back to you promptly.
           </p>
         </div>
 
@@ -151,7 +151,7 @@ const Contact = () => {
               </h2>
               <p className="text-muted-foreground mb-8">
                 Reach out to us directly through any of the following channels.
-                We're here to help you bring your ideas to life.
+                We\'re here to help you bring your ideas to life.
               </p>
             </div>
 
@@ -168,10 +168,10 @@ const Contact = () => {
                       Email
                     </h3>
                     <a
-                      href="mailto:forgelabs.tech@gmail.com"
+                      href="mailto:forgelabs.np@gmail.com"
                       className="text-primary-blue hover:underline"
                     >
-                      forgelabs.tech@gmail.com
+                      forgelabs.np@gmail.com
                     </a>
                   </div>
                 </div>
