@@ -1,9 +1,9 @@
 import FAQSection from "@/components/FAQSection";
 import { Helmet } from "react-helmet-async";
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 
 const FAQPage = () => {
-  useEffect(() => {
+  useLayoutEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
