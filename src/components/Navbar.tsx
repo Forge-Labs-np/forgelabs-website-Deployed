@@ -25,7 +25,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center h-full">
-            <img src={navLogo} alt="ForgeLabs Logo" className="h-full w-auto" style={{ mixBlendMode: 'multiply' }} />
+            <img src={navLogo} alt="ForgeLabs Logo" className="h-full w-auto" style={{ mixBlendMode: 'color-burn' }} />
           </Link>
 
           {/* Desktop Navigation */}
