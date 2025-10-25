@@ -36,7 +36,7 @@ const faqs = [
   },
   {
     question: "What is your technology stack?",
-    answer: "We primarily use the MERN stack (MongoDB, Express, React, Node.js) for most projects, but we are flexible and can adapt to other technologies based on project needs.",
+    answer: "We specialize in a variety of technologies to meet your project's needs. Our expertise includes React for front-end development, and for the back-end, we are proficient in Java Spring Boot, .NET, and PostgreSQL.",
   },
   {
     question: "How do you handle project management?",
