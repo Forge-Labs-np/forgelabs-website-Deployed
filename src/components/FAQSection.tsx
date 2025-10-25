@@ -83,7 +83,7 @@ const FAQSection = () => {
                     exit={{ opacity: 0, height: 0 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                   >
-                    <AccordionContent className="p-6 pt-0 text-muted-foreground">
+                    <AccordionContent className="p-6 pt-0 text-muted-foreground text-base">
                       {faq.answer}
                     </AccordionContent>
                   </motion.div>
