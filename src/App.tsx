@@ -17,6 +17,7 @@ import Support from "./pages/Support";
 import NotFound from "./pages/NotFound";
 import OurWork from './pages/OurWork';
 import FAQPage from './pages/FAQ';
+import ScrollToTop from './components/ScrollToTop';
 
 const queryClient = new QueryClient();
 
@@ -37,6 +38,7 @@ const App = () => {
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <Layout>
             <Routes>
               <Route path="/" element={<Home />} />
