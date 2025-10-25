@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const OurWork = () => {
   const fadeIn = {
@@ -12,6 +13,18 @@ const OurWork = () => {
 
   return (
     <div className="bg-background text-foreground">
+      <Helmet>
+        <title>Our Work - ForgeLabs</title>
+        <meta name="description" content="A showcase of our in-progress projects and experiments at ForgeLabs. See what we're building and get a glimpse of our capabilities." />
+        <meta name="keywords" content="ForgeLabs projects, our work, portfolio, web development projects, software development examples" />
+        <meta property="og:title" content="Our Work - ForgeLabs" />
+        <meta property="og:description" content="A showcase of our in-progress projects and experiments at ForgeLabs. See what we're building and get a glimpse of our capabilities." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://forgelabs.tech/our-work" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Our Work - ForgeLabs" />
+        <meta name="twitter:description" content="A showcase of our in-progress projects and experiments at ForgeLabs." />
+      </Helmet>
       {/* Hero Section */}
       <motion.section
         variants={fadeIn}

@@ -2,6 +2,7 @@ import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Home } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const NotFound = () => {
   const location = useLocation();
@@ -12,6 +13,9 @@ const NotFound = () => {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-gradient-hero">
+      <Helmet>
+        <title>404 - Page Not Found</title>
+      </Helmet>
       <div className="text-center px-4">
         <h1 className="mb-4 text-8xl font-bold text-primary-blue">404</h1>
         <p className="mb-8 text-2xl text-foreground font-semibold">Oops! Page not found</p>
