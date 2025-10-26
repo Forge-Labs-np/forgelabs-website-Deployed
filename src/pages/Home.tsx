@@ -137,7 +137,13 @@ const Home = () => {
             {/* Technology Pills */}
             <div className="flex flex-wrap justify-center gap-x-4 gap-y-6 mb-8">
               {technologies.map((tech, index) => (
-                <div key={tech.name} data-aos="fade-up" data-aos-delay={index * 100} className="animate-float">
+                <div 
+                  key={tech.name} 
+                  data-aos="fade-up" 
+                  data-aos-delay={index * 100} 
+                  className="animate-float"
+                  style={{ animationDelay: `${(index % 5) * 200}ms` }}
+                >
                   <span
                     className="flex items-center px-6 py-3 bg-card border border-border rounded-full text-sm font-medium text-foreground hover:border-primary hover:text-primary-blue transition-all duration-300 cursor-default"
                   >
