@@ -141,11 +141,11 @@ const Home = () => {
                   <span
                     className="flex items-center px-6 py-3 bg-card border border-border rounded-full text-sm font-medium text-foreground hover:border-primary hover:text-primary-blue transition-all duration-300 cursor-default"
                   >
+                    <img src={tech.icon} alt={`${tech.name} icon`} className="mr-2 h-5 w-5" />
                     {tech.name}
-                    <img src={tech.icon} alt={`${tech.name} icon`} className="ml-2 h-5 w-5" />
                   </span>
                 </div>
-              ))}\
+              ))}
             </div>
 
             <div data-aos="fade-up" data-aos-delay="900">
