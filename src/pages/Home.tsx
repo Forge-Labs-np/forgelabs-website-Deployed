@@ -141,6 +141,8 @@ const Home = () => {
                   key={tech.name} 
                   data-aos="fade-up" 
                   data-aos-delay={index * 100}
+                  className="animate-float"
+                  style={{ animationDelay: `${(index % 5) * 150}ms` }}
                 >
                   <span
                     className="flex items-center px-6 py-3 bg-card border border-border rounded-full text-sm font-medium text-foreground hover:border-primary hover:text-primary-blue transition-all duration-300 cursor-default"
