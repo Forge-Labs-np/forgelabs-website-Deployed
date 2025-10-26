@@ -18,14 +18,14 @@ import ProcessSection from "@/components/ProcessSection";
 
 const Home = () => {
   const technologies = [
-    "React",
-    "Java",
-    "Spring Boot",
-    "MongoDB",
-    "PostgreSQL",
-    "TypeScript",
-    "PHP",
-    ".NET Technologies",
+    { name: "React", icon: "/react.svg" },
+    { name: "Java", icon: "/java.svg" },
+    { name: "Spring Boot", icon: "/springBoot.svg" },
+    { name: "MongoDB", icon: "/mongoDB.svg" },
+    { name: "PostgreSQL", icon: "/postgresql.svg" },
+    { name: "TypeScript", icon: "/typescript.svg" },
+    { name: "PHP", icon: "/php.svg" },
+    { name: ".NET Technologies", icon: "/dotNet.svg" },
   ];
 
   return (
@@ -137,14 +137,15 @@ const Home = () => {
             {/* Technology Pills */}
             <div className="flex flex-wrap justify-center gap-x-4 gap-y-6 mb-8">
               {technologies.map((tech, index) => (
-                <div key={tech} data-aos="fade-up" data-aos-delay={index * 100}>
+                <div key={tech.name} data-aos="fade-up" data-aos-delay={index * 100}>
                   <span
-                    className="px-6 py-3 bg-card border border-border rounded-full text-sm font-medium text-foreground hover:border-primary hover:text-primary-blue transition-all duration-300 cursor-default"
+                    className="flex items-center px-6 py-3 bg-card border border-border rounded-full text-sm font-medium text-foreground hover:border-primary hover:text-primary-blue transition-all duration-300 cursor-default"
                   >
-                    {tech}
+                    {tech.name}
+                    <img src={tech.icon} alt={`${tech.name} icon`} className="ml-2 h-5 w-5" />
                   </span>
                 </div>
-              ))}
+              ))}\
             </div>
 
             <div data-aos="fade-up" data-aos-delay="900">
@@ -167,7 +168,7 @@ const Home = () => {
               About ForgeLabs
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              We're a Nepal-based IT company specializing in software and web
+              We\'re a Nepal-based IT company specializing in software and web
               development. We approach every project with precision, creativity,
               and collaboration, ensuring solutions that are effective,
               reliable, and high-quality.
