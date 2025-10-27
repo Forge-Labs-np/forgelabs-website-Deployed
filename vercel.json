@@ -1,4 +1,11 @@
 {
+  "redirects": [
+    {
+      "source": "https://forgelabsnp.tech/:path*",
+      "destination": "https://www.forgelabsnp.tech/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
