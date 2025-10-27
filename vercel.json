@@ -1,7 +1,13 @@
 {
   "redirects": [
     {
-      "source": "https://forgelabsnp.tech/:path*",
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "forgelabsnp.tech"
+        }
+      ],
       "destination": "https://www.forgelabsnp.tech/:path*",
       "permanent": true
     }
