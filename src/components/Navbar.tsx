@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { useIsMobile } from "../hooks/use-mobile";
-import navLogo from "../assets/nav-logo.png";
+import navLogo from "../assets/logo.png";
 
 const Navbar = () => {
   const location = useLocation();
@@ -25,7 +25,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center h-full">
-            <img src={navLogo} alt="ForgeLabs Logo" className="h-full w-auto" style={{ mixBlendMode: 'multiply' }} />
+            <img src={navLogo} alt="ForgeLabs Logo" className="h-full w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
