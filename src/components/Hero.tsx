@@ -78,7 +78,12 @@ const Hero = ({
               {description}
             </p>
           )}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
+          <div
+            className={cn(
+              "flex flex-col sm:flex-row gap-4 pt-4",
+              isCompact ? "justify-center" : "justify-center md:justify-start"
+            )}
+          >
             {ctaLink && ctaText && (
               <Button variant="hero" size="lg" asChild>
                 <Link to={ctaLink}>{ctaText}</Link>
