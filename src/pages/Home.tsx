@@ -26,7 +26,7 @@ const Home = () => {
     { name: "PostgreSQL", icon: "/postgresql.svg" },
     { name: "TypeScript", icon: "/typescript.svg" },
     { name: "PHP", icon: "/php.svg" },
-    { name: ".NET Technologies", icon: "/dotNet.svg" },
+    { name: ".NET Technology", icon: "/dotNet.svg" },
   ];
 
   return (
