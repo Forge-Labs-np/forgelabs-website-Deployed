@@ -9,7 +9,7 @@ interface ServiceDetailProps {
 
 const ServiceDetail: React.FC<ServiceDetailProps> = ({ title, description, imageUrl, reverse }) => {
   return (
-    <div className={`flex flex-col md:flex-row items-center justify-between py-12 ${reverse ? 'md:flex-row-reverse' : ''}`}>
+    <div className={`flex flex-col md:flex-row items-center justify-between py-4 ${reverse ? 'md:flex-row-reverse' : ''}`}>
       <div className="md:w-1/2 p-4" data-aos={`fade-${reverse ? 'left' : 'right'}`}>
         <img src={imageUrl} alt={title} className="rounded-lg max-w-sm mx-auto mix-blend-multiply" />
       </div>
