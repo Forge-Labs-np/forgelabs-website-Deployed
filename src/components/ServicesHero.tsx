@@ -17,7 +17,7 @@ const fadeIn: Variants = {
 const ServicesHero = () => {
   return (
     <section className="min-h-screen flex items-center bg-primary/5 py-20 px-6 md:px-10">
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
+      <div className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between">
         {/* Left Side: Text Content */}
         <motion.div
           className="flex flex-col justify-center text-center md:text-left md:w-1/2"
