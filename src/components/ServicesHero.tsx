@@ -1,5 +1,6 @@
 
 import { motion, Variants } from "framer-motion";
+import servicesImage from "../assets/images/services.png";
 
 const fadeIn: Variants = {
   hidden: { opacity: 0, y: 20 },
@@ -16,10 +17,10 @@ const fadeIn: Variants = {
 const ServicesHero = () => {
   return (
     <section className="min-h-screen flex items-center bg-primary/5 py-20 px-6 md:px-10">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
         {/* Left Side: Text Content */}
         <motion.div
-          className="flex flex-col justify-center text-center md:text-left"
+          className="flex flex-col justify-center text-center md:text-left md:w-1/2"
           variants={fadeIn}
           initial="hidden"
           whileInView="visible"
@@ -38,24 +39,13 @@ const ServicesHero = () => {
 
         {/* Right Side: Illustration */}
         <motion.div
-          className="relative flex items-center justify-center"
+          className="relative md:w-1/2 mt-12 md:mt-0"
           variants={fadeIn}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {
-            /* 
-            Developer's Note: 
-            Please replace this placeholder with a tech-inspired vector illustration 
-            that aligns with the ForgeLabs brand. The illustration should represent 
-            collaboration, prototyping, or product planning.
-            Example: A team around a whiteboard, UI wireframes turning into a product, etc.
-          */
-          }
-          <div className="w-full max-w-md h-80 rounded-lg bg-white/50 flex items-center justify-center border border-dashed border-primary/20">
-            <p className="text-gray-500">Illustration Placeholder</p>
-          </div>
+          <img src={servicesImage} alt="Strategic Prototype-Based Solutions" className="w-full max-w-lg rounded-lg mix-blend-multiply md:-ml-12" />
         </motion.div>
       </div>
     </section>
