@@ -20,7 +20,7 @@ const CTASection = ({
   return (
     <section
       className={`py-16 md:py-20 ${
-        variant === "gradient" ? "gradient-primary text-white" : "bg-muted"
+        variant === "gradient" ? "gradient-primary" : "bg-muted"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

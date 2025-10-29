@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import CTASection from "@/components/CTASection";
 
 const OurWork = () => {
   const fadeIn = {
@@ -148,17 +149,12 @@ const OurWork = () => {
         </div>
       </section>
 
-      {/* Contact CTA */}
-      <section className="py-20 bg-muted" data-aos="fade-up">
-        <div className="container mx-auto text-center">
-          <h2 className="text-2xl font-bold">Want to collaborate or see what’s next?</h2>
-          <div className="mt-6">
-            <Button asChild size="lg">
-              <Link to="/contact">Let's Collaborate</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <CTASection
+        title="Want to collaborate or see what’s next?"
+        ctaText="Let's Collaborate"
+        ctaLink="/contact"
+        variant="gradient"
+      />
     </div>
   );
 };
