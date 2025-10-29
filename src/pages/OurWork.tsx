@@ -1,5 +1,4 @@
-
-import { motion } from "framer-motion";
+import Hero from "@/components/Hero";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
@@ -7,11 +6,6 @@ import { Helmet } from "react-helmet-async";
 import CTASection from "@/components/CTASection";
 
 const OurWork = () => {
-  const fadeIn = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-  };
-
   return (
     <div className="bg-background text-foreground">
       <Helmet>
@@ -27,22 +21,15 @@ const OurWork = () => {
         <meta name="twitter:description" content="A showcase of our in-progress projects and experiments at ForgeLabs." />
       </Helmet>
       {/* Hero Section */}
-      <motion.section
-        variants={fadeIn}
-        initial="hidden"
-        animate="visible"
-        className="text-center py-20 bg-white dark:bg-gray-900"
-      >
-        <h1 className="text-5xl font-bold">Our Work Is in Progress 🚀</h1>
-        <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-          We’re experimenting, building, and forging digital solutions from the ground up. Take a look at what’s cooking inside ForgeLabs.
-        </p>
-        <div className="mt-8">
-          <Button asChild>
-            <Link to="/contact">Join Our Journey</Link>
-          </Button>
-        </div>
-      </motion.section>
+      <div data-aos="fade-in">
+        <Hero
+          title="Our Work Is in Progress 🚀"
+          description="We’re experimenting, building, and forging digital solutions from the ground up. Take a look at what’s cooking inside ForgeLabs."
+          ctaText="Join Our Journey"
+          ctaLink="/contact"
+          isCompact={true}
+        />
+      </div>
 
       {/* Demo Works Grid */}
       <section className="py-20" data-aos="fade-up">

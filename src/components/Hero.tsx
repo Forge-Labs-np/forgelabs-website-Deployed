@@ -1,19 +1,19 @@
 
-import { Button } from "@/components/ui/button";
+import { Button } from "./ui/button";
+import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 interface HeroProps {
   title?: string;
   subtitle?: string;
-  description: string;
-  ctaText: string;
-  ctaLink: string;
+  description?: string;
+  ctaText?: string;
+  ctaLink?: string;
   secondaryCtaText?: string;
   secondaryCtaLink?: string;
   imageSrc?: string;
-  variant?: "default" | "compact";
+  isCompact?: boolean;
 }
 
 const Hero = ({
@@ -25,14 +25,12 @@ const Hero = ({
   secondaryCtaText,
   secondaryCtaLink,
   imageSrc,
-  variant = "default",
+  isCompact = false,
 }: HeroProps) => {
-  const isCompact = variant === "compact";
-
   return (
     <section
       className={cn(
-        "bg-[#eaf5ff] py-12 px-6",
+        "gradient-hero py-12 px-6",
         isCompact ? "md:py-16" : "md:py-20 md:min-h-screen"
       )}
     >
@@ -64,55 +62,49 @@ const Hero = ({
             <p
               className={cn(
                 "font-bold text-gray-800",
-                isCompact ? "text-xl md:text-2xl" : "text-3xl md:text-4xl"
+                isCompact ? "text-lg md:text-xl" : "text-xl md:text-2xl"
               )}
             >
               {subtitle}
             </p>
           )}
-          <p
-            className={cn(
-              "text-gray-600",
-              isCompact
-                ? "text-lg max-w-2xl mx-auto"
-                : "text-lg md:text-xl max-w-2xl mx-auto md:mx-0"
-            )}
-          >
-            {description}
-          </p>
-          <div
-            className={cn(
-              "flex flex-col sm:flex-row gap-4 pt-4",
-              isCompact ? "justify-center" : "justify-center md:justify-start"
-            )}
-          >
-            <Button
-              asChild
-              size="lg"
-              className="bg-transparent hover:bg-[#0067fc] text-[#0067fc] hover:text-white border border-[#0067fc] font-medium px-6 py-3 rounded-lg transition group"
+          {description && (
+            <p
+              className={cn(
+                "text-muted-foreground",
+                isCompact ? "text-md" : "text-lg"
+              )}
             >
-              <Link to={ctaLink}>
-                {ctaText}{" "}
-                <ArrowRight
-                  className="ml-2 group-hover:translate-x-1 transition-transform"
-                  size={20}
-                />
-              </Link>
-            </Button>
-            {secondaryCtaText && secondaryCtaLink && !isCompact && (
-              <Button asChild size="lg" variant="outline" className="font-medium px-6 py-3 rounded-lg">
-                <Link to={secondaryCtaLink}>{secondaryCtaText}</Link>
+              {description}
+            </p>
+          )}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
+            {ctaLink && ctaText && (
+              <Button variant="hero" size="lg" asChild>
+                <Link to={ctaLink}>{ctaText}</Link>
+              </Button>
+            )}
+            {secondaryCtaLink && secondaryCtaText && (
+              <Button
+                variant="outline"
+                size="lg"
+                asChild
+                className="group bg-transparent"
+              >
+                <Link to={secondaryCtaLink}>
+                  {secondaryCtaText}
+                  <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </Button>
             )}
           </div>
         </div>
         {!isCompact && imageSrc && (
-          <div className="md:w-1/2 relative flex justify-center">
-            <div className="absolute inset-x-0 top-0 bottom-[-20rem] rounded-lg opacity-20 -z-1 md:inset-0 md:rounded-full md:scale-110"></div>
+          <div className="md:w-1/2 mt-8 md:mt-0">
             <img
               src={imageSrc}
-              alt="Hero Illustration"
-              className="relative z-10 w-full max-w-md mix-blend-multiply"
+              alt="Hero Image"
+              className="rounded-lg w-full h-auto max-w-md mx-auto"
             />
           </div>
         )}

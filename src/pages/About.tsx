@@ -24,7 +24,7 @@ const About = () => {
           description="A place where ideas are forged into impactful digital realities"
           ctaText="Get in Touch"
           ctaLink="/contact"
-          variant="compact"
+          isCompact={true}
         />
       </div>
 
