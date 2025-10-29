@@ -17,8 +17,8 @@ const Services = () => {
       imageUrl: service1,
     },
     {
-      title: "Outsourcing & Dev Support",
-      description: "Skilled developers who integrate seamlessly with your team to accelerate projects. We provide flexible support models to match your project requirements.",
+      title: "Digital Marketing",
+      description: "Strategic digital marketing campaigns to boost your online presence. We cover SEO, content marketing, and social media to grow your audience.",
       imageUrl: service2,
     },
     {
@@ -38,7 +38,7 @@ const Services = () => {
     },
     {
       title: "Graphics Designing",
-      description: "Creative and professional graphic design services for your brand's visual identity. We create everything from logos to marketing materials that stand out.",
+      description: "Creative and professional graphic design services for your brand\'s visual identity. We create everything from logos to marketing materials that stand out.",
       imageUrl: service6,
     },
   ];
@@ -47,15 +47,15 @@ const Services = () => {
     <div className="min-h-screen">
       <Helmet>
         <title>Our Services - ForgeLabs</title>
-        <meta name="description" content="Explore the services offered by ForgeLabs, including enterprise web application development, outsourcing, UI/UX design, and more." />
-        <meta name="keywords" content="ForgeLabs services, web development, outsourcing, UI/UX design, software development, maintenance, graphics design" />
+        <meta name="description" content="Explore the services offered by ForgeLabs, including enterprise web application development, digital marketing, UI/UX design, and more." />
+        <meta name="keywords" content="ForgeLabs services, web development, digital marketing, UI/UX design, software development, maintenance, graphics design" />
         <meta property="og:title" content="Our Services - ForgeLabs" />
-        <meta property="og:description" content="Explore the services offered by ForgeLabs, including enterprise web application development, outsourcing, UI/UX design, and more." />
+        <meta property="og:description" content="Explore the services offered by ForgeLabs, including enterprise web application development, digital marketing, UI/UX design, and more." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://forgelabs.tech/services" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content="Our Services - ForgeLabs" />
-        <meta name="twitter:description" content="Explore the services offered by ForgeLabs, including enterprise web application development, outsourcing, UI/UX design, and more." />
+        <meta name="twitter:description" content="Explore the services offered by ForgeLabs, including enterprise web application development, digital marketing, UI/UX design, and more." />
       </Helmet>
       
       <ServicesHero />
@@ -88,7 +88,7 @@ const Services = () => {
       <div data-aos="fade-in">
         <CTASection
           title="Ready to Get Started?"
-          description="Let's discuss how we can help transform your business with our services"
+          description="Let\'s discuss how we can help transform your business with our services"
           ctaText="Contact Us Today"
           ctaLink="/contact"
           variant="gradient"

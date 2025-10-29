@@ -33,8 +33,8 @@ const Home = () => {
     <div className="min-h-screen">
       <Helmet>
         <title>ForgeLabs - Forging Ideas into Digital Realities</title>
-        <meta name="description" content="ForgeLabs specializes in transforming concepts into scalable, secure, and efficient enterprise web applications. We offer web development, outsourcing support, UI/UX design, and more." />
-        <meta name="keywords" content="ForgeLabs, web development, enterprise applications, software development, outsourcing, UI/UX design, Nepal, IT company" />
+        <meta name="description" content="ForgeLabs specializes in transforming concepts into scalable, secure, and efficient enterprise web applications. We offer web development, digital marketing, UI/UX design, and more." />
+        <meta name="keywords" content="ForgeLabs, web development, enterprise applications, software development, digital marketing, UI/UX design, Nepal, IT company" />
         <meta property="og:title" content="ForgeLabs - Forging Ideas into Digital Realities" />
         <meta property="og:description" content="Transforming concepts into scalable, secure, and efficient enterprise web applications." />
         <meta property="og:type" content="website" />
@@ -87,8 +87,8 @@ const Home = () => {
             <div data-aos="fade-up" data-aos-delay="200">
               <ServiceCard
                 icon={Wrench}
-                title="Outsourcing Support"
-                description="Skilled developers who integrate seamlessly with your team"
+                title="Digital Marketing"
+                description="Strategic campaigns to boost your online presence and grow your audience"
               />
             </div>
             <div data-aos="fade-up" data-aos-delay="300">
