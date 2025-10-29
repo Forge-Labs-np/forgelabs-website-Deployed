@@ -39,7 +39,7 @@
     --radius: 0.5rem;
 
     /* Custom gradients for CTAs */
-    --gradient-primary: linear-gradient(135deg, hsl(206, 97%, 49%) 0%, hsl(218, 98%, 50%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(206, 97%, 60%) 0%, hsl(218, 98%, 65%) 100%);
     --gradient-hero: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(210, 40%, 98%) 100%);
     
     /* Shadows */
