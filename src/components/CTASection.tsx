@@ -20,14 +20,14 @@ const CTASection = ({
   return (
     <section
       className={`py-16 md:py-20 ${
-        variant === "gradient" ? "gradient-primary" : "bg-muted"
+        variant === "gradient" ? "gradient-primary text-white" : "bg-muted"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center">
           <h2
             className={`text-3xl md:text-4xl font-bold mb-4 ${
-              variant === "gradient" ? "text-primary" : "text-foreground"
+              variant === "gradient" ? "text-white" : "text-foreground"
             }`}
           >
             {title}
@@ -35,17 +35,17 @@ const CTASection = ({
           {description && (
             <p
               className={`text-lg mb-8 ${
-                variant === "gradient" ? "text-primary/90" : "text-muted-foreground"
+                variant === "gradient" ? "text-white/90" : "text-muted-foreground"
               }`}
             >
               {description}
             </p>
           )}
           <Button
-            variant={variant === "gradient" ? "default" : "hero"}
+            variant={variant === "gradient" ? "secondary" : "hero"}
             size="lg"
             asChild
-            className={`group ${variant === "gradient" ? "bg-primary text-white hover:bg-primary/90" : ""}`}
+            className={`group ${variant === "gradient" ? "bg-white text-primary hover:bg-white/90" : ""}`}
           >
             <Link to={ctaLink}>
               {ctaText}
