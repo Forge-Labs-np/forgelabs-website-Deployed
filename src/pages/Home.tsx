@@ -19,6 +19,7 @@ import ProcessSection from "@/components/ProcessSection";
 const Home = () => {
   const technologies = [
     { name: "React", icon: "/react.svg" },
+    { name: "Angular", icon: "/angular.svg" },
     { name: "Java", icon: "/java.svg" },
     { name: "Spring Boot", icon: "/springBoot.svg" },
     { name: "MongoDB", icon: "/mongoDB.svg" },
@@ -184,7 +185,7 @@ const Home = () => {
               About ForgeLabs
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              We\'re a Nepal-based IT company specializing in software and web
+              We're a Nepal-based IT company specializing in software and web
               development. We approach every project with precision, creativity,
               and collaboration, ensuring solutions that are effective,
               reliable, and high-quality.
