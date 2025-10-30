@@ -60,13 +60,14 @@ const Services = () => {
       
       <ServicesHero />
 
-      <section className="py-16 md:py-20">
+      <section className="py-20 md:py-28 bg-gradient-to-b from-white to-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div data-aos="fade-up">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-center">
-              Our Key Services
+          <div data-aos="fade-up" className="text-center mb-16 space-y-4">
+            <span className="section-label inline-block">What We Offer</span>
+            <h2 className="section-title">
+              Our Key <span className="text-primary">Services</span>
             </h2>
-            <p className="text-lg text-muted-foreground mb-12 text-center max-w-3xl mx-auto">
+            <p className="section-description mx-auto">
               We offer comprehensive solutions tailored to meet your business needs and drive digital transformation
             </p>
           </div>

@@ -5,15 +5,16 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-muted border-t border-border">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="relative bg-gradient-to-b from-muted to-muted/50 border-t border-border overflow-hidden">
+      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Company Info */}
-          <div className="col-span-1 md:col-span-2">
-            <h3 className="text-2xl font-bold text-primary-blue mb-4">
+          <div className="col-span-1 md:col-span-2 space-y-6">
+            <h3 className="text-3xl font-bold text-primary mb-2">
               ForgeLabs
             </h3>
-            <p className="text-muted-foreground mb-4 max-w-md">
+            <p className="text-muted-foreground mb-6 max-w-md leading-relaxed">
               Where ideas are forged into impactful digital realities. We
               specialize in building enterprise-grade web applications tailored
               for your business needs.
@@ -46,7 +47,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-bold text-foreground mb-4">Quick Links</h4>
+            <h4 className="font-bold text-foreground mb-6 text-lg">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
@@ -85,7 +86,7 @@ const Footer = () => {
 
           {/* Support */}
           <div>
-            <h4 className="font-bold text-foreground mb-4">Support</h4>
+            <h4 className="font-bold text-foreground mb-6 text-lg">Support</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
@@ -108,8 +109,8 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-border mt-4 pt-4 text-center">
-          <p className="text-sm text-muted-foreground">
+        <div className="border-t border-border/50 mt-8 pt-6 text-center">
+          <p className="text-sm text-muted-foreground font-medium">
             © {currentYear} ForgeLabs Pvt Ltd. All rights reserved.
           </p>
         </div>

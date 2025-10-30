@@ -16,36 +16,46 @@ const fadeIn: Variants = {
 
 const ServicesHero = () => {
   return (
-    <section className="min-h-screen flex items-center bg-primary/5 py-20 px-6 md:px-10">
-      <div className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between">
+    <section className="relative min-h-[85vh] flex items-center gradient-hero py-20 px-6 md:px-10 overflow-hidden isolate">
+      {/* Decorative background elements */}
+      <div className="absolute top-20 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-10 left-0 w-80 h-80 bg-secondary/10 rounded-full blur-3xl" />
+      
+      <div className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-12 relative">
         {/* Left Side: Text Content */}
         <motion.div
-          className="flex flex-col justify-center text-center md:text-left md:w-1/2"
+          className="flex flex-col justify-center text-center md:text-left md:w-1/2 space-y-6"
           variants={fadeIn}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <span className="text-primary font-semibold mb-2 uppercase tracking-wider">
+          <span className="section-label">
             What We Provide
           </span>
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 leading-tight">
-            Strategic Prototype-Based Solutions for Modern Businesses
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+            Strategic Prototype-Based Solutions for <span className="text-primary">Modern Businesses</span>
           </h1>
-          <p className="mt-6 text-lg text-gray-600 max-w-xl mx-auto md:mx-0">
-            At ForgeLabs, we turn ideas into functional prototypes that evolve into powerful products. Our process is built around collaboration, innovation, and precision — ensuring your business moves from concept to deployment with speed and confidence.
+          <p className="text-lg md:text-xl text-muted-foreground max-w-xl mx-auto md:mx-0 leading-relaxed">
+            At ForgeLabs, we turn ideas into functional prototypes that evolve into powerful products. Our process is built around collaboration, innovation, and precision.
           </p>
         </motion.div>
 
         {/* Right Side: Illustration */}
         <motion.div
-          className="relative md:w-1/2 mt-12 md:mt-0"
+          className="relative md:w-1/2 mt-12 md:mt-0 flex justify-center"
           variants={fadeIn}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <img src={servicesImage} alt="Strategic Prototype-Based Solutions" className="w-full max-w-lg rounded-lg mix-blend-multiply md:-ml-12" />
+          <div className="relative">
+            <img 
+              src={servicesImage} 
+              alt="Strategic Prototype-Based Solutions" 
+              className="relative w-full max-w-lg mix-blend-multiply" 
+            />
+          </div>
         </motion.div>
       </div>
     </section>

@@ -60,17 +60,18 @@ const Home = () => {
       </div>
 
       {/* Services Preview Section */}
-      <section className="py-16 md:py-20">
+      <section className="py-20 md:py-28 bg-gradient-to-b from-white to-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center mb-12" data-aos="fade-up">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              What We Do
+          <div className="max-w-4xl mx-auto text-center mb-16 space-y-4" data-aos="fade-up">
+            <span className="section-label inline-block">Our Services</span>
+            <h2 className="section-title">
+              Exceptional Services For Your <span className="text-primary">Business Growth</span>
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="section-description mx-auto mb-8">
               We specialize in building enterprise-grade web applications
               tailored for your business needs.
             </p>
-            <Button variant="default" size="lg" asChild>
+            <Button variant="hero" size="lg" asChild className="shadow-primary">
               <Link to="/services">Explore Our Services</Link>
             </Button>
           </div>
@@ -124,34 +125,35 @@ const Home = () => {
       </section>
 
       {/* Expertise Preview Section */}
-      <section className="py-16 md:py-20 bg-muted">
+      <section className="py-20 md:py-28 bg-gradient-to-b from-white to-muted/50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center" data-aos="fade-up">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Tools & Technologies We Excel In
+          <div className="max-w-4xl mx-auto text-center space-y-4" data-aos="fade-up">
+            <span className="section-label inline-block">Technologies</span>
+            <h2 className="section-title mb-4">
+              Tools & Technologies We <span className="text-primary">Excel In</span>
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="section-description mx-auto mb-12">
               We work with modern, battle-tested technologies to deliver robust
               solutions
             </p>
 
             {/* Technology Pills */}
-            <div className="flex flex-wrap justify-center gap-x-4 gap-y-6 mb-8">
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
               {technologies.map((tech, index) => (
                 <div
                   key={tech.name}
                   data-aos="fade-up"
-                  data-aos-delay={index * 100}
+                  data-aos-delay={index * 50}
                 >
                   <span
-                    className="flex items-center px-6 py-3 bg-card border border-border rounded-full text-sm font-medium text-foreground hover:border-primary hover:text-primary-blue transition-all duration-300 cursor-default"
+                    className="group flex items-center px-6 py-4 bg-white border-2 border-border rounded-2xl text-sm font-semibold text-foreground hover:border-primary hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-default"
                   >
                     <img
                       src={tech.icon}
                       alt={`${tech.name} icon`}
-                      className="mr-2 h-5 w-5"
+                      className="mr-3 h-6 w-6 group-hover:scale-110 transition-transform"
                     />
-                    <span>
+                    <span className="group-hover:text-primary transition-colors">
                       {tech.name}
                     </span>
                   </span>
@@ -160,7 +162,7 @@ const Home = () => {
             </div>
 
             <div data-aos="fade-up" data-aos-delay="900">
-              <Button variant="default" size="lg" asChild>
+              <Button variant="hero" size="lg" asChild className="shadow-primary">
                 <Link to="/services">See Our Expertise</Link>
               </Button>
             </div>
@@ -172,19 +174,20 @@ const Home = () => {
       <ProcessSection />
 
       {/* About Us Teaser */}
-      <section className="py-16 md:py-20">
+      <section className="py-20 md:py-28 bg-gradient-to-b from-muted/30 to-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center" data-aos="fade-up">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              About ForgeLabs
+          <div className="max-w-4xl mx-auto text-center space-y-6" data-aos="fade-up">
+            <span className="section-label inline-block">About Us</span>
+            <h2 className="section-title">
+              About <span className="text-primary">ForgeLabs</span>
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="section-description mx-auto">
               We're a Nepal-based IT company specializing in software and web
               development. We approach every project with precision, creativity,
               and collaboration, ensuring solutions that are effective,
               reliable, and high-quality.
             </p>
-            <Button variant="default" size="lg" asChild>
+            <Button variant="hero" size="lg" asChild className="shadow-primary mt-8">
               <Link to="/about">Learn More About Us</Link>
             </Button>
           </div>

@@ -97,9 +97,9 @@ const Support = () => {
             <h2 className="text-2xl font-bold text-foreground mb-6">
               Submit a Support Ticket
             </h2>
-            <form ref={form} onSubmit={sendEmail} className="space-y-6">
+            <form ref={form} onSubmit={sendEmail}>
               {/* Name Field */}
-              <div>
+              <div className="mb-6">
                 <Label htmlFor="user_name">Name *</Label>
                 <Input
                   id="user_name"
@@ -112,7 +112,7 @@ const Support = () => {
               </div>
 
               {/* Email Field */}
-              <div>
+              <div className="mb-6">
                 <Label htmlFor="user_email">Email *</Label>
                 <Input
                   id="user_email"
@@ -125,7 +125,7 @@ const Support = () => {
               </div>
 
               {/* Phone Field */}
-              <div>
+              <div className="mb-6">
                 <Label htmlFor="user_phone">Phone (Optional)</Label>
                 <Input
                   id="user_phone"
@@ -137,7 +137,7 @@ const Support = () => {
               </div>
 
               {/* Issue Type Dropdown */}
-              <div>
+              <div className="mb-6">
                 <Label htmlFor="issue_type">Type of Issue *</Label>
                 <Select
                   name="issue_type"
@@ -157,7 +157,7 @@ const Support = () => {
               </div>
 
               {/* Description Field */}
-              <div>
+              <div className="mb-6">
                 <Label htmlFor="message">Description / Message *</Label>
                 <Textarea
                   id="message"
@@ -174,7 +174,6 @@ const Support = () => {
                 type="submit"
                 variant="hero"
                 size="lg"
-                className="w-full"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? "Submitting..." : "Submit Ticket"}

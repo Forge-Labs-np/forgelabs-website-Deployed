@@ -27,7 +27,7 @@ const Contact = () => {
         )
         .then(
           () => {
-            toast.success("Message sent successfully! We\'ll get back to you soon.", {
+            toast.success("Message sent successfully! We'll get back to you soon.", {
               style: {
                 background: "#1a202c",
                 color: "#ffffff",
@@ -64,20 +64,20 @@ const Contact = () => {
       <div data-aos="fade-in">
         <Hero
           title="Get in Touch"
-          description="Have a project, an idea, or just want to chat? Fill out the form below, and we\'ll get back to you promptly."
+          description="Have a project, an idea, or just want to chat? Fill out the form below, and we'll get back to you promptly."
           isCompact={true} />
       </div>
-      <div className="py-16 md:py-20">
+      <div className="py-20 md:py-28 bg-gradient-to-b from-white to-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Contact Form */}
-            <div className="bg-card border border-border rounded-lg p-8 shadow-lg" data-aos="fade-right">
+            <div className="bg-white border-2 border-border rounded-3xl p-10 shadow-xl" data-aos="fade-right">
               <h2 className="text-2xl font-bold text-foreground mb-6">
                 Send Us a Message
               </h2>
-              <form ref={form} onSubmit={sendEmail} className="space-y-6">
+              <form ref={form} onSubmit={sendEmail}>
                 {/* Name Field */}
-                <div>
+                <div className="mb-6">
                   <Label htmlFor="name">Name *</Label>
                   <Input
                     id="name"
@@ -90,7 +90,7 @@ const Contact = () => {
                 </div>
 
                 {/* Email Field */}
-                <div>
+                <div className="mb-6">
                   <Label htmlFor="email">Email *</Label>
                   <Input
                     id="email"
@@ -103,7 +103,7 @@ const Contact = () => {
                 </div>
 
                 {/* Phone Field */}
-                <div>
+                <div className="mb-6">
                   <Label htmlFor="phone">Phone (Optional)</Label>
                   <Input
                     id="phone"
@@ -115,7 +115,7 @@ const Contact = () => {
                 </div>
 
                 {/* Message Field */}
-                <div>
+                <div className="mb-6">
                   <Label htmlFor="message">Message *</Label>
                   <Textarea
                     id="message"
@@ -132,9 +132,7 @@ const Contact = () => {
                   type="submit"
                   variant="hero"
                   size="lg"
-                  className="w-full"
-                  disabled={isSubmitting}
-                >
+                  disabled={isSubmitting}>
                   {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
@@ -142,20 +140,21 @@ const Contact = () => {
 
             {/* Contact Information */}
             <div className="space-y-8" data-aos="fade-left">
-              <div>
-                <h2 className="text-2xl font-bold text-foreground mb-6">
+              <div className="space-y-4">
+                <span className="section-label inline-block">Get In Touch</span>
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground">
                   Contact Information
                 </h2>
-                <p className="text-muted-foreground mb-8">
+                <p className="text-muted-foreground text-lg">
                   Reach out to us directly through any of the following channels.
-                  We\'re here to help you bring your ideas to life.
+                  We're here to help you bring your ideas to life.
                 </p>
               </div>
 
               {/* Contact Cards */}
               <div className="space-y-6">
                 {/* Email */}
-                <div className="bg-muted border border-border rounded-lg p-6 hover:shadow-md transition-shadow" data-aos="fade-left" data-aos-delay="100">
+                <div className="bg-white border-2 border-border rounded-2xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300" data-aos="fade-left" data-aos-delay="100">
                   <div className="flex items-start">
                     <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                       <Mail className="text-primary-blue" size={24} />
@@ -175,7 +174,7 @@ const Contact = () => {
                 </div>
 
                 {/* Phone */}
-                <div className="bg-muted border border-border rounded-lg p-6 hover:shadow-md transition-shadow" data-aos="fade-left" data-aos-delay="200">
+                <div className="bg-white border-2 border-border rounded-2xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300" data-aos="fade-left" data-aos-delay="200">
                   <div className="flex items-start">
                     <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                       <Phone className="text-primary-blue" size={24} />
@@ -195,7 +194,7 @@ const Contact = () => {
                 </div>
 
                 {/* Location */}
-                <div className="bg-muted border border-border rounded-lg p-6 hover:shadow-md transition-shadow" data-aos="fade-left" data-aos-delay="300">
+                <div className="bg-white border-2 border-border rounded-2xl p-6 hover:shadow-lg hover:-translate-y-1 transition-all duration-300" data-aos="fade-left" data-aos-delay="300">
                   <div className="flex items-start">
                     <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
                       <MapPin className="text-primary-blue" size={24} />
@@ -207,16 +206,6 @@ const Contact = () => {
                       <p className="text-muted-foreground">Kathmandu, Nepal</p>
                     </div>
                   </div>
-                </div>
-              </div>
-
-              {/* Business Hours */}
-              <div className="bg-gradient-primary text-white rounded-lg p-6" data-aos="fade-up" data-aos-delay="400">
-                <h3 className="text-xl font-bold mb-4">Business Hours</h3>
-                <div className="space-y-2 text-white/90">
-                  <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                  <p>Saturday: 10:00 AM - 4:00 PM</p>
-                  <p>Sunday: Closed</p>
                 </div>
               </div>
             </div>

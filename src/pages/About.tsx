@@ -29,13 +29,14 @@ const About = () => {
       </div>
 
       {/* Welcome Message */}
-      <section className="py-16 md:py-20">
+      <section className="py-20 md:py-28 bg-gradient-to-b from-white to-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto" data-aos="fade-up">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6 text-center">
-              Welcome to ForgeLabs
+          <div className="max-w-4xl mx-auto space-y-6" data-aos="fade-up">
+            <span className="section-label inline-block mx-auto text-center w-full">Who We Are</span>
+            <h2 className="section-title text-center">
+              Welcome to <span className="text-primary">ForgeLabs</span>
             </h2>
-            <p className="text-lg text-muted-foreground text-center leading-relaxed">
+            <p className="section-description text-center mx-auto">
               Welcome to ForgeLabs — a place where ideas are forged into impactful digital realities. 
               We're here to help businesses and individuals bring their digital visions to life through 
               innovative solutions and expert craftsmanship.
@@ -45,53 +46,63 @@ const About = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 md:py-20 bg-muted">
+      <section className="py-20 md:py-28 bg-gradient-to-b from-white to-muted/50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <div data-aos="fade-up">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
-                Why Choose Us
+            <div data-aos="fade-up" className="text-center mb-16 space-y-4">
+              <span className="section-label inline-block">Why Choose Us</span>
+              <h2 className="section-title">
+                What Makes Us <span className="text-primary">Different</span>
               </h2>
-              <p className="text-lg text-muted-foreground mb-8 text-center">
+              <p className="section-description mx-auto">
                 At ForgeLabs, we don't just develop websites—we craft solutions that make a difference. 
-                Every project is approached with precision, creativity, and collaboration, ensuring it's:
+                Every project is approached with precision, creativity, and collaboration.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div data-aos="fade-up" data-aos-delay="100">
-                <div className="bg-card border border-border rounded-lg p-6 text-center hover:shadow-lg transition-all duration-300">
-                  <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Target className="text-primary-blue" size={32} />
+                <div className="group relative bg-white border-2 border-border rounded-3xl p-8 text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-500 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="relative z-10">
+                    <div className="bg-gradient-to-br from-primary/10 to-primary/5 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
+                      <Target className="text-primary-blue" size={36} />
+                    </div>
+                    <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">Effective</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Solving real problems for your business or project
+                    </p>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-3">Effective</h3>
-                  <p className="text-muted-foreground">
-                    Solving real problems for your business or project
-                  </p>
                 </div>
               </div>
 
               <div data-aos="fade-up" data-aos-delay="200">
-                <div className="bg-card border border-border rounded-lg p-6 text-center hover:shadow-lg transition-all duration-300">
-                  <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Shield className="text-primary-blue" size={32} />
+                <div className="group relative bg-white border-2 border-border rounded-3xl p-8 text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-500 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="relative z-10">
+                    <div className="bg-gradient-to-br from-primary/10 to-primary/5 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
+                      <Shield className="text-primary-blue" size={36} />
+                    </div>
+                    <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">Reliable</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Developed with clean, maintainable, and scalable code
+                    </p>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-3">Reliable</h3>
-                  <p className="text-muted-foreground">
-                    Developed with clean, maintainable, and scalable code
-                  </p>
                 </div>
               </div>
 
               <div data-aos="fade-up" data-aos-delay="300">
-                <div className="bg-card border border-border rounded-lg p-6 text-center hover:shadow-lg transition-all duration-300">
-                  <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Award className="text-primary-blue" size={32} />
+                <div className="group relative bg-white border-2 border-border rounded-3xl p-8 text-center hover:shadow-xl hover:-translate-y-2 transition-all duration-500 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  <div className="relative z-10">
+                    <div className="bg-gradient-to-br from-primary/10 to-primary/5 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-500">
+                      <Award className="text-primary-blue" size={36} />
+                    </div>
+                    <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">High-Quality</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Polished, tested, and user-friendly for the best experience
+                    </p>
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-3">High-Quality</h3>
-                  <p className="text-muted-foreground">
-                    Polished, tested, and user-friendly for the best experience
-                  </p>
                 </div>
               </div>
             </div>
