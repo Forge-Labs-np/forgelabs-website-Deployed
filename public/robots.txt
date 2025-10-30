@@ -1,0 +1,11 @@
+# Allow all search engines to crawl the entire site.
+User-agent: *
+Allow: /
+
+# Specific rules for major search engines can be added here if needed.
+# For example:
+# User-agent: Googlebot
+# Disallow: /private/
+
+# Sitemap location
+Sitemap: https://www.forgelabsnp.tech/sitemap.xml
