@@ -1,25 +1,28 @@
 
 import { motion } from "framer-motion";
-import { BrainCircuit, LayoutTemplate, GanttChart, Rocket } from "lucide-react";
+import step1 from "@/assets/images/step-1.png";
+import step2 from "@/assets/images/step-2.png";
+import step3 from "@/assets/images/step-3.png";
+import step4 from "@/assets/images/step-4.png";
 
 const processSteps = [
   {
-    icon: <BrainCircuit size={40} className="text-primary" />,
+    icon: <img src={step1} alt="Discover & Define" className="h-24 w-auto" />,
     title: "Discover & Define",
     description: "We start by understanding your goals, challenges, and requirements to define a clear roadmap.",
   },
   {
-    icon: <LayoutTemplate size={40} className="text-primary" />,
+    icon: <img src={step2} alt="Prototype & Design" className="h-24 w-auto" />,
     title: "Prototype & Design",
     description: "We transform ideas into interactive prototypes — allowing early feedback and real-time collaboration before development begins.",
   },
   {
-    icon: <GanttChart size={40} className="text-primary" />,
+    icon: <img src={step3} alt="Develop & Iterate" className="h-24 w-auto" />,
     title: "Develop & Iterate",
     description: "Our developers build scalable solutions while continuously refining through feedback loops and testing.",
   },
   {
-    icon: <Rocket size={40} className="text-primary" />,
+    icon: <img src={step4} alt="Deliver & Support" className="h-24 w-auto" />,
     title: "Deliver & Support",
     description: "We ensure on-time delivery, smooth deployment, and continuous post-launch support for lasting performance.",
   },
@@ -52,7 +55,7 @@ const ProcessSection = () => {
           {processSteps.map((step, index) => (
             <motion.div
               key={index}
-              className="group relative bg-white p-8 rounded-3xl border border-border hover:border-primary/20 shadow-soft hover:shadow-xl hover:-translate-y-2 transition-all duration-500 flex flex-col items-center text-center"
+              className="group relative bg-white p-8 rounded-3xl border border-border hover:border-primary/20 shadow-soft hover:shadow-xl hover:-translate-y-2 transition-all duration-500 flex flex-col items-start text-left"
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
