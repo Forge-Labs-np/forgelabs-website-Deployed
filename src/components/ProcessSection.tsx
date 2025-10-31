@@ -32,7 +32,7 @@ const processSteps = [
 const ProcessStepCard = ({ step }: { step: typeof processSteps[0] }) => {
     return (
         <div
-            className="group relative overflow-hidden bg-white p-8 rounded-3xl border border-border shadow-soft hover:shadow-xl transition-shadow duration-300 flex flex-col items-start text-left"
+            className="group relative overflow-hidden bg-white p-8 rounded-3xl border border-border flex flex-col items-start text-left"
         >
             <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             
