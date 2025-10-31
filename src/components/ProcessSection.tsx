@@ -1,3 +1,6 @@
+"use client";
+
+import React, { useState, useRef, MouseEvent } from "react";
 import step1 from "@/assets/images/step-1.png";
 import step2 from "@/assets/images/step-2.png";
 import step3 from "@/assets/images/step-3.png";
@@ -26,6 +29,86 @@ const processSteps = [
   },
 ];
 
+const ProcessStepCard = ({ step }: { step: typeof processSteps[0] }) => {
+    const [isHovered, setIsHovered] = useState(false);
+    const [hoverDirection, setHoverDirection] = useState('left');
+    const cardRef = useRef<HTMLDivElement>(null);
+
+    const handleMouseEnter = (event: MouseEvent<HTMLDivElement>) => {
+        const card = cardRef.current;
+        if (!card) return;
+
+        const rect = card.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+
+        const { width, height } = rect;
+
+        const fromTop = y;
+        const fromBottom = height - y;
+        const fromLeft = x;
+        const fromRight = width - x;
+
+        const minDistance = Math.min(fromTop, fromBottom, fromLeft, fromRight);
+
+        let direction = '';
+        if (minDistance === fromTop) direction = 'top';
+        else if (minDistance === fromBottom) direction = 'bottom';
+        else if (minDistance === fromLeft) direction = 'left';
+        else if (minDistance === fromRight) direction = 'right';
+        
+        setHoverDirection(direction);
+        setIsHovered(true);
+    };
+
+    const handleMouseLeave = () => {
+        setIsHovered(false);
+    };
+
+    const overlayStyle: React.CSSProperties = {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        backgroundColor: 'hsl(var(--primary) / 0.25)',
+        zIndex: 0,
+        transition: 'transform 0.4s ease-out',
+        transform: 'scale(0)',
+    };
+
+    if (hoverDirection === 'top') {
+        overlayStyle.transformOrigin = 'top';
+        overlayStyle.transform = isHovered ? 'scaleY(1)' : 'scaleY(0)';
+    } else if (hoverDirection === 'bottom') {
+        overlayStyle.transformOrigin = 'bottom';
+        overlayStyle.transform = isHovered ? 'scaleY(1)' : 'scaleY(0)';
+    } else if (hoverDirection === 'left') {
+        overlayStyle.transformOrigin = 'left';
+        overlayStyle.transform = isHovered ? 'scaleX(1)' : 'scaleX(0)';
+    } else if (hoverDirection === 'right') {
+        overlayStyle.transformOrigin = 'right';
+        overlayStyle.transform = isHovered ? 'scaleX(1)' : 'scaleX(0)';
+    }
+
+    return (
+        <div
+            ref={cardRef}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            className="relative overflow-hidden bg-white p-8 rounded-3xl border border-border shadow-soft hover:shadow-xl transition-shadow duration-300 flex flex-col items-start text-left"
+        >
+            <div style={overlayStyle} />
+            
+            <div className="relative mb-6">
+                {step.icon}
+            </div>
+            <h3 className={`relative text-xl font-bold mb-3 transition-colors duration-300 ${isHovered ? 'text-primary' : ''}`}>{step.title}</h3>
+            <p className={`relative transition-colors duration-300 leading-relaxed ${isHovered ? 'text-foreground' : 'text-muted-foreground'}`}>{step.description}</p>
+        </div>
+    );
+};
+
 const ProcessSection = () => {
   return (
     <section className="py-20 md:py-28 bg-gradient-to-b from-white to-muted/30">
@@ -39,18 +122,7 @@ const ProcessSection = () => {
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {processSteps.map((step, index) => (
-            <div
-              key={index}
-              className="group relative overflow-hidden bg-white p-8 rounded-3xl border border-border shadow-soft hover:shadow-xl transition-all duration-300 flex flex-col items-start text-left"
-            >
-              <div className="absolute top-0 right-0 h-full w-full bg-primary/25 origin-right transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out z-0" />
-              
-              <div className="relative mb-6">
-                {step.icon}
-              </div>
-              <h3 className="relative text-xl font-bold mb-3 group-hover:text-primary transition-colors duration-300">{step.title}</h3>
-              <p className="relative text-muted-foreground group-hover:text-foreground transition-colors duration-300 leading-relaxed">{step.description}</p>
-            </div>
+            <ProcessStepCard key={index} step={step} />
           ))}
         </div>
       </div>
