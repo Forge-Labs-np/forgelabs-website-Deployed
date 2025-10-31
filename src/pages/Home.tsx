@@ -60,7 +60,7 @@ const Home = () => {
       </div>
 
       {/* Services Preview Section */}
-      <section className="py-20 md:py-28 bg-gradient-to-b from-white to-muted/30">
+      <section className="py-12 md:py-16 bg-gradient-to-b from-white to-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-16 space-y-4" data-aos="fade-up">
             <span className="section-label inline-block">Our Services</span>
@@ -125,7 +125,7 @@ const Home = () => {
       </section>
 
       {/* Expertise Preview Section */}
-      <section className="py-20 md:py-28 bg-gradient-to-b from-white to-muted/50">
+      <section className="py-12 md:py-16 bg-gradient-to-b from-white to-muted/50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center space-y-4" data-aos="fade-up">
             <span className="section-label inline-block">Technologies</span>
@@ -174,7 +174,7 @@ const Home = () => {
       <ProcessSection />
 
       {/* About Us Teaser */}
-      <section className="py-20 md:py-28 bg-gradient-to-b from-muted/30 to-white">
+      <section className="py-12 md:py-16 bg-gradient-to-b from-muted/30 to-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center space-y-6" data-aos="fade-up">
             <span className="section-label inline-block">About Us</span>

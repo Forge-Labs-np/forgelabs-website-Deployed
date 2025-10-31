@@ -47,7 +47,7 @@ const ProcessStepCard = ({ step }: { step: typeof processSteps[0] }) => {
 
 const ProcessSection = () => {
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-b from-white to-muted/30">
+    <section className="py-12 md:py-16 bg-gradient-to-b from-white to-muted/30">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 space-y-4">
           <span className="section-label inline-block">How We Work</span>

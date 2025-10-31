@@ -109,7 +109,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-border/50 mt-8 pt-6 text-center">
+        <div className="border-t border-border/50 mt-8 py-6 text-center">
           <p className="text-sm text-muted-foreground font-medium">
             © {currentYear} ForgeLabs Pvt Ltd. All rights reserved.
           </p>
