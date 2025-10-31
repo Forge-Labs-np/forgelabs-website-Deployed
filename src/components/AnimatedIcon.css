@@ -12,7 +12,7 @@
 }
 
 .group:hover .animated-icon {
-  animation: redraw 2.5s ease-in-out;
+  animation: redraw 3.5s ease-in-out;
 }
 
 @keyframes redraw {
