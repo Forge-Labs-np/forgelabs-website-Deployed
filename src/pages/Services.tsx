@@ -44,7 +44,7 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-hidden">
       <Helmet>
         <title>Our Services - ForgeLabs</title>
         <meta name="description" content="Explore the services offered by ForgeLabs, including enterprise web application development, digital marketing, UI/UX design, and more." />

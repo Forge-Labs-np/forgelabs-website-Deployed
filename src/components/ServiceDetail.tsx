@@ -16,7 +16,7 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ title, description, image
           <img 
             src={imageUrl} 
             alt={title} 
-            className="relative max-w-md mx-auto mix-blend-multiply shadow-soft group-hover:shadow-xl rounded-xl transition-all duration-500" 
+            className="relative w-full mx-auto mix-blend-multiply shadow-soft group-hover:shadow-xl rounded-xl transition-all duration-500" 
           />
         </div>
       </div>
