@@ -1,4 +1,5 @@
 import { LucideIcon } from "lucide-react";
+import AnimatedIcon from "./AnimatedIcon";
 
 interface ServiceCardProps {
   icon: LucideIcon;
@@ -11,7 +12,7 @@ const ServiceCard = ({ icon: Icon, title, description }: ServiceCardProps) => {
     <div className="group relative bg-white border border-border rounded-2xl p-8 hover:shadow-xl transition-all duration-500 overflow-hidden">
       <div className="relative z-10">
         <div className="bg-gradient-to-br from-primary/10 to-primary/5 w-16 h-16 rounded-2xl flex items-center justify-center mb-6 transition-transform duration-500">
-          <Icon className="text-primary-blue" size={28} strokeWidth={2} />
+          <AnimatedIcon IconComponent={Icon} />
         </div>
         <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">{title}</h3>
         <p className="text-muted-foreground leading-relaxed">{description}</p>

@@ -1,0 +1,34 @@
+.animated-icon-container {
+  width: 28px;
+  height: 28px;
+}
+
+.animated-icon {
+  stroke: hsl(var(--primary));
+  stroke-width: 2;
+  fill: transparent;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+}
+
+.group:hover .animated-icon {
+  animation: redraw 2.5s ease-in-out;
+}
+
+@keyframes redraw {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  
+  20% {
+    stroke-dashoffset: 1000;
+  }
+  
+  80% {
+    stroke-dashoffset: 0;
+  }
+  
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
