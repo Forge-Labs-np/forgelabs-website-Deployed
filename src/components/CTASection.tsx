@@ -20,7 +20,7 @@ const CTASection = ({
   return (
     <section
       className={`relative py-12 md:py-16 overflow-hidden ${
-        variant === "gradient" ? "gradient-cta" : "bg-gradient-to-b from-muted/50 to-muted"
+        variant === "gradient" ? "bg-primary" : "bg-gradient-to-b from-muted/50 to-muted"
       }`}
     >
       {variant === "gradient" && (
