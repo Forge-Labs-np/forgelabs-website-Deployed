@@ -47,37 +47,33 @@ const Home = () => {
       </Helmet>
       {/* Hero Section */}
       <div data-aos="fade-in">
-        <Hero
-          title="ForgeLabs"
-          subtitle="Where ideas are forged into impactful digital realities"
-          description="Transforming concepts into scalable, secure, and efficient enterprise web applications."
-          ctaText="Let's Get Started"
-          ctaLink="/contact"
-          secondaryCtaText="Discover Our Work"
-          secondaryCtaLink="/our-work"
-          imageSrc={heroImage}
-        />
+        <Hero />
       </div>
 
       {/* Services Preview Section */}
-      <section className="py-12 md:py-16 bg-gradient-to-b from-white to-muted/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center mb-16 space-y-4" data-aos="fade-up">
-            <span className="section-label inline-block">Our Services</span>
-            <h2 className="section-title">
-              Exceptional Services For Your <span className="text-primary">Business Growth</span>
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="absolute -left-24 -top-24 w-80 h-80 bg-blue-600 rounded-full opacity-20"></div>
+        <div className="absolute left-24 top-24 w-24 h-24 bg-green-400 rounded-full opacity-20"></div>
+        <div className="absolute -right-24 -bottom-24 w-96 h-96 bg-pink-500 rounded-full opacity-20"></div>
+        <div className="absolute right-24 bottom-24 w-20 h-20 bg-yellow-400 rounded-full opacity-20"></div>
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <p className="text-xs font-semibold tracking-widest text-blue-600 uppercase">Our Services</p>
+            <h2 className="mt-2 text-4xl font-extrabold text-gray-900 sm:text-5xl">
+              Exceptional Services For Your<br />
+              <span className="text-blue-600">Business Growth</span>
             </h2>
-            <p className="section-description mx-auto mb-8">
-              We specialize in building enterprise-grade web applications
-              tailored for your business needs.
+            <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-500">
+              We specialize in building enterprise-grade web applications tailored for your business needs.
             </p>
-            <Button variant="hero" size="lg" asChild className="shadow-primary">
+            <Button asChild className="mt-8 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-blue-500/50 transition-all duration-300 transform hover:-translate-y-1">
               <Link to="/services">Explore Our Services</Link>
             </Button>
           </div>
 
           {/* Service Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
             <div data-aos="fade-up" data-aos-delay="100">
               <ServiceCard
                 icon={Code2}
@@ -123,6 +119,11 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* Section Divider */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="border-t border-gray-200"></div>
+      </div>
 
       {/* Expertise Preview Section */}
       <section className="py-12 md:py-16 bg-gradient-to-b from-white to-muted/50">
